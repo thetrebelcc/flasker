@@ -1,0 +1,64 @@
+<!-- Home page -->
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Image -->
+<section class="hero ">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8 is-offset-2">
+                    <figure class="image is-16by9">
+                        <img src="{{ url_for('static', filename='images/first-post.png')}}" alt="">
+                    </figure>
+                </div>
+            </div>
+
+           
+
+            <div class="is-divider"></div>
+
+            <section class="section">
+                <div class="columns">
+                    <div class="column is-8 is-offset-2">
+                        <div class="content is-medium">
+
+                            {{ testing }}
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- newsletter -->
+<section class="section">
+    <div class="columns">
+        <div class="column is-10 is-offset-1">
+            <div class="container has-text-centered is-fluid">
+                <div class="hero is-light">
+                    <div class="hero-body">
+                        <h2 class="title is-4">Sign up for our newsletter</h1>
+                            <div class="column is-6 is-offset-3">
+                                <div class="field has-addons has-addons-centered">
+                                    <div class="control is-expanded">
+                                        <input class="input " type="text" placeholder="Email address">
+                                    </div>
+                                    <div class="control">
+                                        <a class="button is-info">
+                                            Subscribe
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

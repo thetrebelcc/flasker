@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, redirect
+import time
 
 from .forms import SampleForm
 
@@ -22,6 +23,11 @@ def forms():
 
     # If form is upon submission and is validated success
     if form.validate_on_submit():
-        return redirect('index')
+        name = form.firstName.data
+        last = form.lastName.data
+
+        print(name)
+        print(last)
+        return render_template('results.html', testing = name)
 
     return render_template('forms.html', form=form)
